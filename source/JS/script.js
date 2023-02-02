@@ -28,6 +28,7 @@ const isMobile = {
 };
 
 let parent;
+
 $(`.poligon__items`).click(function(e){
     const elemet = e.target.closest(`ion-icon`);
     if(!elemet) return;
@@ -57,3 +58,26 @@ setInterval(() => {
 
 });
 
+window.addEventListener(`load`, function(){
+    
+
+
+
+setTimeout(() => {
+    const elemet = document.querySelector(`ion-icon`);
+    console.log(elemet);
+    parent = elemet.closest(`.plits__item`);
+
+const parentItems = parent.closest(`.poligon__items`);  
+
+const spanElem = parentItems.querySelector(`.poligon span`);
+
+const bottomPart = parent.querySelector(`.plits__bottom p`);
+    spanElem.style.cssText = `
+    left:${(parent.getBoundingClientRect().left-parentItems.getBoundingClientRect().left+(parent.getBoundingClientRect().width/2))/parentItems.getBoundingClientRect().width*100}%;
+    top:${((bottomPart.getBoundingClientRect().top-parentItems.getBoundingClientRect().top)/parentItems.getBoundingClientRect().height)*100}%;
+    `;   
+}, 300);
+
+
+});

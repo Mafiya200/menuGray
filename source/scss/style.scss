@@ -79,7 +79,7 @@ border-radius: 0 0 1.0714rem 1.0714rem;
     
         transition: 0.5s;
         position: absolute;
-        top: 57.919%;
+        top: 60.0%;
         left: 10%;
         transform: translate(-50%,0);
 
@@ -156,13 +156,7 @@ border-radius: 0 0 1.0714rem 1.0714rem;
         visibility: visible;
     }
 }
-@media (max-width:20em) {
-    .plits__item._active .plits__top{
-        
 
-    
-    }
-}
 @media (max-width:32em) {
     .plits__item._active .plits__top{
         
